@@ -1,0 +1,27 @@
+
+import java.awt.*;
+//import java.awt.event.*;
+import javax.swing.*;
+
+public class Janela1 extends JFrame{
+
+	public Janela1(){
+		setTitle("Testando isso aki!");
+		setSize(800, 600);
+		setLocation(200, 100);
+		setResizable(false);
+		getContentPane().setBackground(Color.gray);
+		criaBotoes();
+	}
+	
+	private void criaBotoes(){
+		JButton b1 = new JButton("testeee");
+		JButton b2 = new JButton("com img");
+	}
+	
+//	public static void main (String[] args){
+//		JFrame janela = new Janela1();
+//		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		janela.setVisible(true);
+//	}
+}

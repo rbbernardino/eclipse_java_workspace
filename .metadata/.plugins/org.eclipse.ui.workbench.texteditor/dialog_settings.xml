@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="324" key="DIALOG_WIDTH"/>
+		<item value="233" key="DIALOG_Y_ORIGIN"/>
+		<item value="888" key="DIALOG_X_ORIGIN"/>
+		<item value="511" key="DIALOG_HEIGHT"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="Area" key="selection"/>
+		<list key="findhistory">
+			<item value="area"/>
+			<item value="main"/>
+			<item value="black"/>
+			<item value="bl\ck"/>
+			<item value="boxPoligonos.getSelectedItem()"/>
+			<item value="&lt;-"/>
+			<item value="Esperava-se o token \&quot;;\&quot;"/>
+			<item value="esperava-se token ;"/>
+		</list>
+		<list key="replacehistory">
+			<item value="getState()"/>
+			<item value=""/>
+			<item value="checkIsToken"/>
+			<item value="public"/>
+			<item value="/fronteira/"/>
+			<item value="fronteira"/>
+			<item value="!getTokenAtual().equals("/>
+		</list>
+	</section>
+</section>

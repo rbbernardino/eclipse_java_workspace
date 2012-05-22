@@ -1,0 +1,139 @@
+package controle;
+
+public final class DefinicoesTokens {
+	public static String getValorDoLexema(String lexema) {
+		//------------------ OP LÓGICO --------------------
+		if (lexema.equals("&&")) {
+			return "&&";
+		}
+		if (lexema.equals("||")) {
+			return "||";
+		}
+		//------------------ OP ARITMETICO --------------------
+		if (lexema.equals("+")) {
+			return "+";
+		}
+		if (lexema.equals("-")) {
+			return "-";
+		}
+		if (lexema.equals("/")) {
+			return "/";
+		}
+		if (lexema.equals("*")) {
+			return "*";
+		}
+		//-------------------OP RELACIONAL ------------------
+		if(lexema.equals(">")){
+			return ">";
+		}
+		if(lexema.equals("<")){
+			return "<";
+		}
+		if(lexema.equals("==")){
+			return "==";
+		}
+		if(lexema.equals("<=")){
+			return "<=";
+		}
+		if(lexema.equals(">=")){
+			return ">=";
+		}
+		if(lexema.equals("!=")){
+			return "!=";
+		}
+		// --------------------- SEM VALOR ------------------
+		if (lexema.equals("inicio") || lexema.equals("fim")) {
+			return "";
+		}
+		// -------------- DECLARACAO DE VARIAVEIS -------------
+		if (lexema.equals("int")) {
+			return "integer";
+		}
+		if (lexema.equals("string")) {
+			return "string";
+		}
+		// ------------------ CONDICIONAL ----------------
+		if (lexema.equals("se")) {
+			return "se";
+		}
+		if (lexema.equals("senao")) {
+			return "senao";
+		}
+		if (lexema.equals("fimse")) {
+			return "fimse";
+		}
+		// ----------------- COMANDO --------------
+		if (lexema.equals("imprima")){
+			return "imprima";
+		}
+		if (lexema.equals("leia")){
+			return "leia";
+		}
+		// string -> "[sequencia]"
+		// comentario -> #[sequencia]#
+		return "ERRO: \"" + lexema + "\"";
+	}
+
+	// recebe uma palavra começando com letra e verifica o token (palavra
+	// reservada ou identificador)
+	public static String getTokenDoLexema(String lexema) {
+		if (lexema.equals("inicio")) {
+			return "inicio";
+		}
+		if (lexema.equals("fim")) {
+			return "fim";
+		}
+		if (lexema.equals("int") || lexema.equals("string")) {
+			return "tipo_var";
+		}
+		if (lexema.equals("imprima") || lexema.equals("leia")) {
+			return "comando";
+		}
+		if (lexema.equals("se") || lexema.equals("senao")
+				|| lexema.equals("fimse")) {
+			return "op_cond";
+		}
+		if (lexema.equals("&&") || lexema.equals("||")) {
+			return "op_log";
+		}
+		if (lexema.equals(">") || lexema.equals("<") || lexema.equals(">=")
+				|| lexema.equals("<=") || lexema.equals("=")
+				|| lexema.equals("!=")) {
+			return "op_rel";
+		}
+		
+		if (lexema.equals("[")) {
+			return "[";
+		}
+		if (lexema.equals("]")) {
+			return "]";
+		}
+		if (lexema.equals(":")) {
+			return ":";
+		}
+		if (lexema.equals(",")) {
+			return ",";
+		}
+		if (lexema.equals(";")) {
+			return ";";
+		}
+		if (lexema.equals("(")) {
+			return "(";
+		}
+		if (lexema.equals(")")) {
+			return ")";
+		}
+		if (lexema.equals("{")) {
+			return "{";
+		}
+		if (lexema.equals("}")) {
+			return "}";
+		}
+		if (lexema.equals("<-")) {
+			return "<-";
+		}
+		// se nao for palavra reservada, é identificador!
+		return "id";
+	}
+
+}

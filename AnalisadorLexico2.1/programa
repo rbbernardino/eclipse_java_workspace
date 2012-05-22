@@ -1,0 +1,12 @@
+inicio[
+#	int : idade1, idade2;
+	string : str1;
+	{
+	  idade1 <- idade2 ;
+	  idade1 <- idade1 + idade2 - 12/3*2;
+	  str1 <- "hauha";
+	  imprima("Informe as idades:");
+	}
+
+	idade2 <- idade2 + idade1;#	
+]fim

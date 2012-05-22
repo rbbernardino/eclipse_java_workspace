@@ -1,0 +1,33 @@
+package threadring;
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.LinkedBlockingQueue;
+
+import threadring.threadring.NodeOLD;
+
+public class Node implements Runnable {
+	private int nodeId;
+	private Node nextNode;
+	private BlockingQueue<TokenMessage> mailbox = new LinkedBlockingQueue<TokenMessage>();
+	private boolean isActive = false;
+	
+	public Node(int id, Node nextNode) {
+		this.nodeId = id;
+		this.nextNode = nextNode;
+	}
+	
+	public void connect(Node node) {
+		this.nextNode = node;
+		isActive = true;
+	}
+
+	public void sendMessage(TokenMessage m, ExecutorService executor) {
+		mailbox.add(m);
+		executor.execute(this);
+	}
+
+	public void run(){
+		
+	}
+}

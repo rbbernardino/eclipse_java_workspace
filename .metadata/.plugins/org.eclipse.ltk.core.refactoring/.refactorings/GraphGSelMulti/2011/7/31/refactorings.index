@@ -1,0 +1,73 @@
+1311718914484	Rename package 'dragAndDrop'
+1311718931857	Delete element
+1311719091088	Delete element
+1311719102230	Move file
+1311719107260	Delete element
+1311720643738	Delete element
+1311721347276	Rename type 'contantes'
+1311721374379	Rename type 'Contantes'
+1311726429928	Rename field 'DESENHA_VERTICE'
+1311777883274	Rename local variable 'pressed'
+1311778281394	Rename local variable 'currentPosition'
+1311780244330	Move compilation units
+1311780249109	Delete element
+1311780293899	Delete element
+1311780324089	Rename type 'GraphFrame'
+1311780342053	Rename type 'TelaPrincipal'
+1311780357384	Rename type 'TelaControle'
+1311780379552	Rename type 'JanelaDesenhos'
+1311780385967	Rename type 'JanelaDesenhosControle'
+1311780550537	Rename type 'Desenhos'
+1311806633154	Rename field 'NomeArquivo'
+1311807661598	Encapsulate field 'centroX'
+1311807668027	Encapsulate field 'centroY'
+1311807681255	Encapsulate field 'altura'
+1311807687690	Encapsulate field 'largura'
+1311807803340	Encapsulate field 'centro'
+1311814688225	Rename method 'setWorkspace'
+1311814696281	Rename method 'setArestas'
+1311814701874	Rename method 'setVertices'
+1311814927230	Rename method 'setAresta'
+1311898850849	Delete elements
+1311898858697	Delete element
+1311899136962	Delete elements
+1311899142332	Delete elements
+1311899154668	Move file
+1311980023343	Move files
+1311980030706	Delete element
+1311980040143	Rename package 'fronteira.desenho2'
+1311980048958	Rename package 'fronteira.desenho3'
+1311980055163	Rename package 'fronteira.desenho2'
+1311980062897	Rename package 'fronteira.desenho4'
+1311992648486	Delete element
+1311992662328	Rename type 'Circulo3'
+1311992708837	Rename type 'Desenho2Princp'
+1312125040072	Rename field 'vertTemp'
+1312126417789	Rename field 'STATE_DESENHA_SELECAO'
+1312127011641	Rename field 'verticeDestacado'
+1312130417802	Rename type 'Controle'
+1312131166891	Rename method 'adicionar'
+1312140961824	Copy compilation units
+1312141031889	Rename type 'Desenho3Princp'
+1312141062803	Rename package 'fronteira.desenho4'
+1312141072953	Rename type 'Desenho4Princp'
+1312143588731	Delete elements
+1312143592692	Delete element
+1312143649202	Rename type 'Circulo'
+1312143667521	Rename type 'Quad'
+1312143918633	Rename type 'Forma'
+1312144464242	Rename field 'objetos'
+1312144544141	Rename local variable 'obj'
+1312144578757	Rename local variable 'f'
+1312145804890	Copy compilation unit
+1312146406297	Encapsulate field 'x1'
+1312146502445	Encapsulate field 'x1'
+1312146509654	Encapsulate field 'x2'
+1312146516045	Encapsulate field 'y1'
+1312146525074	Encapsulate field 'y2'
+1312146700311	Rename local variable 'obj'
+1312151014825	Rename method 'findFigura'
+1312151458780	Rename local variable 'fig'
+1312152740495	Rename method 'adicionar'
+1312155797486	Rename field 'linhaTemp'
+1312156337837	Rename field 'shapeTemp'

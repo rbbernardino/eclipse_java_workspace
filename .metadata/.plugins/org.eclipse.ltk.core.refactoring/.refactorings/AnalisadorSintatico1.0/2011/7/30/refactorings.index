@@ -1,0 +1,14 @@
+1311524631777	Delete element
+1311524666493	Delete element
+1311524832908	Rename local variable 'arq_fonte'
+1311524901423	Rename local variable 'tabela_tokens'
+1311524942003	Rename type 'AnalisadorLexico'
+1311524965346	Rename local variable 'al'
+1311524975921	Rename local variable 'ar'
+1311525326305	Rename method 'gerarTabelas'
+1311525633673	Rename type 'Principal'
+1311526365729	Delete element
+1311526855723	Delete element
+1311530911018	Rename local variable 'programa'
+1311531251565	Rename local variable 'arqProg'
+1311533122618	Rename local variable 'lerLinha'

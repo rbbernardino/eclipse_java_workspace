@@ -1,0 +1,37 @@
+
+import java.awt.*;
+import java.awt.event.ActionListener;
+//import java.awt.event.*;
+import javax.swing.*;
+
+public class Janela1 extends JFrame implements ActionListener{
+	JButton bTexto, bImg;
+	ImageIcon img = new ImageIcon("~/temp/img.png");
+	
+	public Janela1(){
+		setTitle("Testando isso aki!");
+		setSize(800, 600);
+		setLocation(200, 100);
+		//setResizable(false);
+		getContentPane().setBackground(Color.gray);
+		criaBotoes();
+	}
+	
+	private void criaBotoes(){
+		JButton b1 = new JButton("testeee");
+		b1.setBackground(Color.WHITE);
+		b1.setForeground(Color.BLUE);
+		b1.setEnabled(true);
+		b1.setToolTipText("cool!!");
+		
+		JButton b2 = new JButton("com img", img);
+		b2.setHorizontalTextPosition(AbstractButton.LEFT);
+		b2.setToolTipText("doiiiis");
+	}
+	
+//	public static void main (String[] args){
+//		JFrame janela = new Janela1();
+//		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		janela.setVisible(true);
+//	}
+}

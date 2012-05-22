@@ -1,0 +1,17 @@
+package threadring;
+
+import threadring.threadring.NodeOLD;
+
+public class SenderNode extends Node{
+	private int repeticoes;
+	
+	public SenderNode(int id, Node nextNode, int repeticoes) {
+		this.nodeId = id;
+		this.nextNode = nextNode;
+		this.repeticoes = repeticoes;
+	}
+	
+	public void run(){
+		
+	}
+}

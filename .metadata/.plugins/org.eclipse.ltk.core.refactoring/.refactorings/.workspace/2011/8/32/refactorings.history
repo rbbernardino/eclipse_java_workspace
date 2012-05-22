@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;GraphG&apos; to &apos;GraphGSelMulti&apos;&#x0A;- Original element: &apos;GraphG&apos;&#x0A;- Renamed element: &apos;GraphG&apos;&#x0A;- Update references to refactored element" description="Rename Java project &apos;GraphG&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=GraphG" name="GraphGSelMulti" references="true" stamp="1312403749413" version="1.0"/>
+</session>

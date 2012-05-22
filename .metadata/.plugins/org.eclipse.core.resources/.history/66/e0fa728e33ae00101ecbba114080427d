@@ -1,0 +1,47 @@
+package threadring;
+
+import java.util.concurrent.TimeUnit;
+
+import threadring.threadring.NodeOLD;
+import formatacao.Salvar;
+
+public class AnelPrincipal {
+	public static void main(String[] args) {
+		int tamMsg = Integer.parseInt(args[0]);
+		int num_proc = Integer.parseInt(args[1]);
+		int num_rep = Integer.parseInt(args[2]);
+
+		long timeStart, timeEnd, timeSpawn, timeExec;
+
+		threadring ring = new threadring(num_proc, num_proc);
+
+		timeStart = ring.getTimeMicro();
+		Node firstNode = ring.initialize();
+		timeEnd = ring.getTimeMicro();
+
+		timeSpawn = timeEnd - timeStart;
+
+		boolean finish = false;
+		timeStart = ring.getTimeMicro();
+		
+		for(int i=1; i<=num_rep; i++){
+			firstNode.sendMessage(new TokenMessage(1, 0));
+		}
+		
+		try {
+			finish = ring.executor.awaitTermination(1, TimeUnit.HOURS);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		timeEnd = ring.getTimeMicro();
+
+		if (finish) {
+			timeExec = timeEnd - timeStart;
+			Salvar.writeResult("/home/pesquisador/teste/result.txt", num_proc,
+					num_rep, timeExec, timeSpawn);
+		} else {
+			System.out
+					.println("Demorou mais que o tempo maximo para executar!");
+		}
+	}
+}

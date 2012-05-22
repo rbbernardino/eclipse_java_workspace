@@ -1,0 +1,26 @@
+1310652380092	Rename field 'N'
+1310652736808	Rename method 'start'
+1310653406961	Delete element
+1310653625081	Rename method 'spawnNodes'
+1310656912347	Rename field 'queue'
+1310657536872	Rename type 'Node'
+1310659082956	Rename compilation unit 'RingNode.java'
+1310659133834	Delete element
+1310659149209	Rename type 'RingNode'
+1310659185911	Delete element
+1310661035033	Rename type 'TokenMessage'
+1310934924137	Delete element
+1310934931245	Delete element
+1310936818946	Rename field 'MAX_NODES'
+1310937734758	Delete element
+1310940608933	Rename package 'formatacao'
+1310941346024	Rename method 'formatResult'
+1310941368975	Delete element
+1310941720096	Delete element
+1310942142576	Rename package 'versao_teste'
+1310942165141	Delete element
+1310942188573	Delete element
+1310942217514	Rename resource 'anel_versao_teste'
+1310942225379	Copy packages
+1310943252635	Move compilation unit
+1310943264893	Move compilation unit

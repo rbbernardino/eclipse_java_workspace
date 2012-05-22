@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1311626477455_2" label="TrabalhosDisciplinas" name="TrabalhosDisciplinas">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GraphG61" type="4"/>
+<item elementID="=AnalisadorLexico2.1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/CompiladorJosiLidRodWill" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Facade" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AdapterPattern" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Threads - SO" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AnalisadorSintatico1.0" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/GraphGSelMulti" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1311626503997_3" label="testes" name="testes">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Concorrencia" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/TestesComGUI" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1311626554561_5" label="LUDUS" name="LUDUS">
+<item elementID="=Java_Compile" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=IMB" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=OO" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1308780098640_0" label="Window Working Set" name="Aggregate for window 1308780098636"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1308780146941_1" label="Window Working Set" name="Aggregate for window 1308780146941"/>
+</workingSetManager>

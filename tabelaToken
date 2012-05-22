@@ -1,0 +1,48 @@
+token    valor
+inicio          
+[          
+int          
+:          
+id          1
+,          
+id          2
+;          
+string          
+:          
+id          3
+;          
+{          
+id          1
+<-          
+id          2
+;          
+id          1
+<-          
+id          1
+op_mat          +
+id          2
+op_mat          -
+num          12
+op_mat          /
+num          3
+op_mat          *
+num          2
+;          
+id          3
+<-          
+cadchar          hauha
+;          
+imprima          
+(          
+cadchar          Informe as idades:
+)          
+;          
+}          
+id          2
+<-          
+id          2
+op_mat          +
+id          1
+;          
+]          
+fim          

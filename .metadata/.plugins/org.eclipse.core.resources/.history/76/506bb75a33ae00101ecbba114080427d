@@ -1,0 +1,116 @@
+package threadring;
+
+/**
+ * The Computer Language Benchmarks Game
+ * http://shootout.alioth.debian.org/
+ *
+ * contributed by Fabien Le Floc'h
+ *
+ * Java implementation of thread-ring benchmark. Best performance is achieved with 
+ * MAX_THREAD=1 as the thread-ring test is bested with only 1 os thread.
+ * This implementation shows using a simple thread pool solves the thread context
+ * switch issue.
+ */
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class threadring {
+	// private static final int MAX_NODES = 503;
+	// private static final int MAX_THREADS = 503;
+
+	private static int MAX_NODES;
+	private static int MAX_THREADS;
+
+	public ExecutorService executor;
+
+	public threadring(int nos, int threads) {
+		MAX_NODES = nos;
+		MAX_THREADS = threads;
+	}
+
+	public long getTimeMicro() {
+		return System.nanoTime() / 1000;
+	}
+
+	public Node initialize() {
+		Node[] nodes = spawnAndConnectNodes(MAX_NODES);
+		return nodes[0];
+	}
+
+	private Node[] spawnAndConnectNodes(int n) {
+		executor = Executors.newFixedThreadPool(MAX_THREADS);
+		Node[] nodes = new Node[n];
+		nodes[0] = new Node (1, null);  // nó inicial
+		nodes[n-1] = new Node(n, nodes[0]);  // último
+		for (int i = n-1; i > 0; i--) {
+			nodes[i] = new Node(i + 1, nodes[i+1]); // conecta com o anterior
+		}
+		nodes[0].connect(nodes[1]);
+		return nodes;
+	}
+/*
+v[5]   n=5
+  v[0]
+  v[4] = v[0]  i=4 5-4-1=0  
+  v[3] = v[4]  i=3 i+1=4
+  v[2] = v[3]  i=2 i+1=3
+  v[1] = v[2]  i=1 i+1=2
+*/  
+	
+	public class NodeOLD implements Runnable {
+		private int nodeId;
+		private NodeOLD nextNode;
+		private BlockingQueue<TokenMessage> mailbox = new LinkedBlockingQueue<TokenMessage>();
+		private boolean isActive = false;
+		private int counter;
+
+		public NodeOLD(int id, NodeOLD nextNode) {
+			this.nodeId = id;
+			this.nextNode = nextNode;
+			this.counter = 0;
+		}
+
+		public void connect(NodeOLD node) {
+			this.nextNode = node;
+			isActive = true;
+		}
+
+		public void sendMessage(TokenMessage m) {
+			mailbox.add(m);
+			executor.execute(this);
+		}
+
+		public void run() {
+			if (isActive) {
+				try {
+					TokenMessage m = mailbox.take();
+					if (m.isStop) {
+						int nextValue = m.value + 1;
+						if (nextValue == MAX_NODES) {
+							// System.out.println("last one");
+							executor.shutdown();
+						} else {
+							m.value = nextValue;
+							nextNode.sendMessage(m);
+						}
+						isActive = false;
+						// System.out.println("ending node "+nodeId);
+					} else {
+						if (m.value == m.value) {
+							System.out.println(nodeId);
+							nextNode.sendMessage(new TokenMessage(nodeId, 0,
+									true));
+						} else {
+							m.value = m.value + 1;
+							nextNode.sendMessage(m);
+						}
+					}
+				} catch (InterruptedException ie) {
+					ie.printStackTrace();
+				}
+			}
+		}
+	}
+}

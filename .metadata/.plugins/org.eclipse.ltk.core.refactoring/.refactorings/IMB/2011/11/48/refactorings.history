@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;Java_Compile/src/pingping_refct&apos;&#x0A;- Original project: &apos;IMB&apos;&#x0A;- Destination element: &apos;Java_Compile/src/pingping_refct&apos;&#x0A;- Original elements:&#x0A;     pingping.PingPing.java&#x0A;     pingping.ProcPing.java&#x0A;     pingping.PingPingPrincipal.java" description="Copy compilation units" destination="=Java_Compile/src&lt;pingping_refct" element1="/src&lt;pingping{PingPing.java" element2="/src&lt;pingping{ProcPing.java" element3="/src&lt;pingping{PingPingPrincipal.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1322423606252" units="3" version="1.0"/>
+</session>
